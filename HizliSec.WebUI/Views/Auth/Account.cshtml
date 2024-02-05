@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+<script src="~/js/authLogin.js" defer></script>
+<link rel="stylesheet" href="~/css/authLogin.css" />
+
+<div class="container right-panel-active">
+
+    <div class="container__form container--signin">
+        <form asp-action="Login"  class="form" id="form2">
+            <h2 class="form__title">Giriş Yap </h2>
+            <input type="email" placeholder="E-Posta:" class="input" name="userName">
+            <input type="password" placeholder="Şifreniz:" class="input" name="password">
+            <button class="btn">Giriş Yap</button>
+        </form>
+    </div>
+    <div class="container__form container--signup">
+        <form asp-action="Register"  method="post" class="form" id="form1">
+            <h2 class="form__title">Seller</h2>
+            <p style="color:green;">@ViewBag.Message</p>
+            <input type="text" placeholder="Ad:" class="input" name="firstName">
+            <input type="text" placeholder="Soyad:" class="input" name="lastName">
+            <input type="text" placeholder="Kullanıcı Adı:" class="input" name="userName">
+            <input type="email" placeholder="E-Posta:" class="input" name="email">
+            <input type="password" placeholder="Şifreniz:" class="input" name="password">
+            <input type="text" placeholder="Sirket Adi:" class="input" name="companyName">
+            <input type="text" placeholder="Adres:" class="input" name="address">
+            <input type="tel" placeholder="Telefon:" class="input" name="phoneNumber">
+            <button class="btn">Kayıt Ol</button>
+        </form>
+    </div>
+    <!--overlay=kaplama -->
+    <div class="container__overlay">
+        <div class="overlay">
+            <div class="overlay__panel overlay--right">
+                <button class="btn" id="signUp">Kayıt Ol</button>
+            </div>
+             <div class="overlay__panel overlay--left">
+                <button class="btn" id="signIn">Giriş Yap</button>
+            </div>
+        </div>
+    </div>
+</div>

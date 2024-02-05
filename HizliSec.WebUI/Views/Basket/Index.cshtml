@@ -1,0 +1,34 @@
+﻿@using HizliSec.Entities.Dtos.OrderDtos;
+@using HizliSec.WebUI.BasketTransaction.BasketModels;
+@model Basket
+
+
+@{
+    Layout = null;
+}
+
+@if (ViewBag.Message is not null)
+{
+    <h1>Siparis Durumu : @ViewBag.Message</h1>
+}
+@foreach (BasketItem item in Model.BasketItems)
+{
+    <div>
+        <h4>@item.ProductName</h4>
+        <h5>@item.CategoryName</h5>
+        <h6>@item.Quantity</h6>
+        <h6>@item.Price</h6>
+        @Html.ActionLink("+","Increase",new {id = item.ProductId});
+        @Html.ActionLink("-","Decrease",new {id = item.ProductId});
+        @Html.ActionLink("Sepetten Sil","RemoveItem",new {id = item.ProductId});
+    </div>
+}
+<div style="background-color:black">
+    <h1 style="color:white">
+        @Model.TotalPrice
+    </h1>
+    <h2>
+        @Html.ActionLink("Sepeti Temizle","RemoveBasket");
+    </h2>
+    @Html.ActionLink("Sepeti Onayla","Index","Order")
+</div>

@@ -1,0 +1,225 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(137, 43, 226, 0.178);
+}
+
+.home-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.5);
+}
+
+.logoisim {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.search-box {
+    display: flex;
+    margin: auto 0;
+    height: 25px;
+    line-height: 35px;
+}
+
+    .search-box input {
+        border: 1px solid rgba(0, 0, 0, 0.805);
+        outline: none;
+        height: 100%;
+        padding: 0 10px;
+        font-size: 20px;
+        width: 350px;
+        border-radius: 15px;
+    }
+
+    .search-box span {
+        color: rgba(0, 0, 0, 0.524);
+        font-size: 13px;
+        background-color: #fff;
+        height: 100%;
+        padding: 8px;
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+        .search-box span::after {
+            height: 100%;
+            width: 0%;
+            content: '';
+            background: violet;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            transition: 0.3s;
+        }
+
+.group {
+    display: flex;
+    align-items: center;
+}
+
+.home-header ul {
+    position: relative;
+    display: flex;
+    gap: 50px;
+}
+
+    .home-header ul li {
+        list-style: none;
+    }
+
+        .home-header ul li a {
+            position: relative;
+            text-decoration: none;
+            font-size: 1em;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+            .home-header ul li a::before {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                width: 100%;
+                height: 2px;
+                background: #333;
+                transform: scaleX(0);
+                transition: transform 0.9s ease-in-out;
+                transform-origin: right;
+            }
+
+            .home-header ul li a:hover::before {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+
+.navigation .login ul {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 13px;
+}
+
+.navigation .login li:hover ul {
+    display: block;
+}
+
+#container {
+    margin-top: 10rem;
+    margin-left: 35px;
+}
+
+.container-1 {
+    background-color: rgba(245, 245, 245, 0.675);
+    border: 3px solid white;
+    color: black;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 155px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    column-gap: 25px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer {
+    background: #fff;
+    overflow-x: hidden;
+    padding: 10px;
+    height: 200px;
+    margin-top: auto;
+    margin-bottom: -35px;
+    width: 100%;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+    .footer-col h4 {
+        font-size: 18px;
+        color: chocolate;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: chocolate;
+            height: 3px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+    .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 300px;
+        color: #333333c7;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+        .footer-col ul li a:hover {
+            color: black;
+            padding-left: 10px;
+        }
+
+.takip {
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300px;
+    color: #333333c7;
+    display: block;
+    transition: all 0.3s ease;
+    bottom: 5px;
+}
+
+    .takip:hover {
+        color: black;
+        padding-left: 10px;
+    }

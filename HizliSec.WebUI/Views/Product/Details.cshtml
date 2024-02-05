@@ -1,0 +1,8 @@
+﻿@model ProductVM
+
+<h1>@Model.Name</h1>
+<h1>@Model.CategoryName</h1>
+<h1>@Model.Price</h1>
+<h1>@Model.Description</h1>
+@Html.ActionLink("Guncelle","Update",new {id =Model.Id})
+@Html.ActionLink("Sil","Delete",new {id =Model.Id})
